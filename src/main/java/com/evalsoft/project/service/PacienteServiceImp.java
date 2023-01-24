@@ -16,6 +16,7 @@ public class PacienteServiceImp implements PacienteService{
     @Override
     @Transactional(readOnly = true)
     public List<Paciente> findAll(){
+        
         return (List<Paciente>) pacienteRepository.findAll();
     }
     @Override

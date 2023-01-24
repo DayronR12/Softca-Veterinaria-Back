@@ -23,7 +23,7 @@ public class loginusuarioServiceImpl implements loginusuarioService{
     @Override
     public int loginValidationn(String usuarioId, String password) {
         try {
-            PreparedStatement statement = connection.prepareStatement("SELECT * FROM loginusuario WHERE usuarioId = '"+usuarioId+"'");
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM loginusuario WHERE usuarioId = '"+usuarioId+"' and password = '"+password+"'");
             ResultSet rs = statement.executeQuery();
 
             while (rs.next()) {

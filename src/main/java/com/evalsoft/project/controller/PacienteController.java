@@ -39,6 +39,7 @@ public class PacienteController {
     public Paciente modificar(@RequestBody Paciente paciente, @PathVariable Integer id){
 
         Paciente pacienteActual = pacienteService.findById(id);
+
         pacienteActual.setNombre(paciente.getNombre());
         pacienteActual.setEspecie(paciente.getEspecie());
         pacienteActual.setRaza(paciente.getRaza());
